@@ -1,0 +1,49 @@
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="{{ site.faviconPath }}" type="image/png" />
+  <link rel="apple-touch-icon" href="{{ site.faviconPath }}">
+  <link rel="mask-icon” href=”{{ site.faviconPath }}"" color=”#ffffff">
+
+  <script>document.documentElement.classList.remove('no-js');</script>
+  {% block head %}
+  {% endblock %}
+
+  {% set currentUrl = site.url + page.url %}
+
+    {% if title == site.name %}
+    {% set pageTitle = title + ' - ' + site.description %}
+    {% else %}
+    {% set pageTitle = title + ' - ' + site.name %}
+    {% endif%}
+
+    <title>{{ pageTitle }}</title>
+
+
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:title" content="{{ pageTitle }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ currentUrl }}" />
+    <meta name="theme-color" content="#58a4dc"/>
+
+    {% if site.authorHandle %}
+    <meta name="twitter:creator" content="@{{ site.authorHandle | replace('@', '') }}" />
+    {% endif %}
+
+    {% if site.description %}
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="twitter:description" content="{{ site.description }}" />
+    <meta property="og:description" content="{{ site.description }}" />
+    {% endif %}
+
+    {% if socialImage %}  
+    <meta property="og:image" content="{{ socialImage }}" />
+    <meta name="twitter:image" content="{{ socialImage }}" />
+    <meta property="og:image:alt" content="Page image for {{ site.name }}" />
+    <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
+    {% else %}
+    <meta property="og:image" content="{{site.faviconPath}}" />
+    <meta name="twitter:image" content="{{site.faviconPath}}" />
+    <meta property="og:image:alt" content="Page image for {{ site.name }}" />
+    <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
+    {% endif %}

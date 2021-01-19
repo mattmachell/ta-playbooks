@@ -1,0 +1,48 @@
+:root {
+    /* Set theme aliases */
+    --color-bg: #efefef;
+    --color-text: #333; 
+  
+    --color-selection-text: white;
+    --color-selection-bg:  rgba(0,0,0, 0.5); 
+  
+    --size-300: 0.8rem;
+    --size-500: 1.25rem;
+    --size-600: 1.56rem;
+    --size-700: 1.95rem;
+    --size-800: 2.44rem;
+    --size-900: 3.05rem;
+    --size-base: 1rem;
+    --size-max: 4rem;
+
+    --rounded: 0.25rem;
+  
+    --max-wrap-inner:  56rem;
+  }
+
+  body{
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .wrapper{
+      max-width: var(--max-wrap-inner);
+      margin:1rem auto;
+      background-color: white;
+      padding:calc(var(--size-base) / 2) 2rem;
+      border-radius: var(--rounded);
+      border: 1px solid rgb(202, 204, 230);
+  }
+
+  h1::before{
+      content: "//";
+      color: #ddd;
+      padding-right:0.3em;
+  }
+
+  hr{
+      border-top: #ddd;
+      border-width: 2px;
+      margin: 2rem 0;
+  }

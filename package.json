@@ -1,0 +1,23 @@
+{
+  "name": "ta-playbooks",
+  "version": "0.0.1",
+  "description": "A series of tools and playbooks for agile TAs",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattmachell/ta-playbooks.git"
+  },
+  "author": "Matt Machell and Co",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattmachell/ta-playbooks/issues"
+  },
+  "homepage": "https://github.com/mattmachell/ta-playbooks#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  }
+}

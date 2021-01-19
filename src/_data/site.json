@@ -1,0 +1,11 @@
+{
+    "name": "TA Playbooks",
+    "description": "A set of tools and playbooks for agile Technical Architects",
+    "url": "https://realms.co.uk",
+    "authorEmail": "matt@realms.co.uk",
+    "authorHandle": "@shuckle",
+    "authorName": "Matt Machell",
+    "enableThirdPartyComments": false,
+    "maxPostsPerPage": 5,
+    "faviconPath": "/imgs/icon.svg"
+  }
