@@ -10,6 +10,7 @@ jobs:
         with:
           node-version: '10.x'
       - run: npm install
+      - run: export BASE_URL=/ta-playbooks
       - run: npm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v1.1.0
