@@ -46,3 +46,7 @@
       border-width: 2px;
       margin: 2rem 0;
   }
+
+  li{
+      margin-bottom: 1em;
+  }
