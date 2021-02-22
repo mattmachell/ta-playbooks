@@ -41,6 +41,6 @@ An idealised modern flow might be something like:
 7. Successful build allows merge to mainline code of the branch
 8. Pipeline runs all lint, unit, integration and user journeys on the new mainline in the integration environment
 9. Successful build allows promotion to a staging environment with synthetic data at scale where security and targeted performance tests take place
-10. If successful change is rolled out to live as a blue/green deploy wehre traffic is slowly cut across to new build and reverted if key metrics degrade.
+10. Successful build allows for promotion to live. Rolled out as a blue/green deploy where traffic is slowly cut across to new build and reverted if key metrics degrade.
 
 This is illustrative only and you shouldn't copy it without asking if those steps fit your team's and software's needs. If you have no automated tests, well, that's going to make your path to live very different indeed. Smaller or larger teams and organisations will also have differning concerns about differing risks and you need to build your path to live around reducing those, not the ones that led to the example above.
