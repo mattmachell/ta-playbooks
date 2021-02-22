@@ -50,3 +50,7 @@
   li{
       margin-bottom: 1em;
   }
+
+  img[src$="#diag"]{
+      width: 60%;
+  }

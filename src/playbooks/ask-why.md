@@ -1,5 +1,5 @@
 ---
-title: Ask why?
+title: 1. Ask why?
 ---
 
 Use the question "why?" to drill down to the real reason people are asking for a thing, be that a piece of technology, a new feature, a new tool or to use a new language.

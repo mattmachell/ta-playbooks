@@ -1,5 +1,5 @@
 ---
-title: What are the consequences? What are the 2nd order consequences?
+title: 3. What are the consequences? What are the 2nd order consequences?
 ---
 
 For a given path in development, ask what the consequences of the choice are. Then from each of those ask what the 2nd order consequences are.

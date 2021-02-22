@@ -1,5 +1,5 @@
 ---
-title: Use Architectural decision records
+title: 2. Use Architectural decision records
 ---
 
 You'll make a lot of decisions about whatever you are building. Both explicit and implicit. 
