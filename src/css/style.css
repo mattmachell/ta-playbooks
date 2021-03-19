@@ -59,5 +59,8 @@
 
   .copyright{
       font-size: 0.8em;
-      color: var(--color-attendent-info)
+      color: var(--color-attendent-info);
+
+      max-width: var(--max-wrap-inner);
+      margin:1rem auto;
   }
