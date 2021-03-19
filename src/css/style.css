@@ -2,9 +2,11 @@
     /* Set theme aliases */
     --color-bg: #efefef;
     --color-text: #333; 
-  
+    --color-attendent-info: #666;
+
     --color-selection-text: white;
     --color-selection-bg:  rgba(0,0,0, 0.5); 
+    
   
     --size-300: 0.8rem;
     --size-500: 1.25rem;
@@ -53,4 +55,9 @@
 
   img[src$="#diag"]{
       width: 60%;
+  }
+
+  .copyright{
+      font-size: 0.8em;
+      color: var(--color-attendent-info)
   }

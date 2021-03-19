@@ -12,7 +12,7 @@ module.exports = function(config) {
     config.addCollection('playbooks', collection => {
         return [
           ...collection.getFilteredByGlob('./src/playbooks/*.md')
-        ].reverse()
+        ]
       });
 
     // 404
