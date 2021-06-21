@@ -28,7 +28,7 @@ This can help you frame other, more detailed questions such as:
 - How might what we create be combined with something else to cause harm?
 - Which bad actors are we facilitating with this product? How do we prevent them from doing that?
 - How do we manage the community around this product? Who gets to decide that?
-- Which impacts did we not account for? ([see 2nd order consequences](what-are-the-2nd-order-consequences))
+- Which impacts did we not account for? ([see 2nd order consequences](../what-are-the-2nd-order-consequences))
 - Who did we fail to consult when building this? Who is impacted that we haven't talked to or tested with?
 
 Beyond this, project your thoughts forward in time to imagine the worst that might happen in the future, given where we expect to be:
