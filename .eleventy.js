@@ -1,4 +1,5 @@
 const fs = require('fs');
+const rssPlugin = require('@11ty/eleventy-plugin-rss');
 
 module.exports = function(config) {
 
@@ -8,6 +9,8 @@ module.exports = function(config) {
     config.addPassthroughCopy('src/js');
     //removed until domain created
     //config.addPassthroughCopy('CNAME');
+
+    config.addPlugin(rssPlugin);
 
     config.addCollection('playbooks', collection => {
         return [
