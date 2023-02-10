@@ -1,12 +1,12 @@
-name: Eleventy Build
+name: Test Build
 on:
   push:
-    branches:
+    branches-ignore: 
       - main
-
 jobs:
-  build_deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    steps:
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@v3
@@ -16,9 +16,3 @@ jobs:
       - run: npm run build
         env: 
           BASE_URL: /ta-playbooks
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v1.1.0
-        env:
-          PUBLISH_DIR: dist 
-          PUBLISH_BRANCH: gh-pages
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
