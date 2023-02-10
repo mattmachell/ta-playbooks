@@ -4,7 +4,7 @@
     {% include "head.njk" %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="{{ env.base_url }}/css/style.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="{{ env.base_url }}css/style.css" type="text/css" media="screen"/>
 </head>
 <body>
     <div class="wrapper">
@@ -18,11 +18,11 @@
     <h2>Topics</h2>
     <ul>
     {% for post in collections.playbooks %}
-    <li><a href="{{ env.base_url }}/{{post.url}}">{{post.data.title}}</a></li>
+    <li><a href="{{ env.base_url }}{{post.url}}">{{post.data.title}}</a></li>
     {% endfor %}
     </ul>
     </div>
     <div class="footer">
-        <p class="copyright">&copy; 2021 Matt Machell and contributors
+        <p class="copyright">&copy; 2023 Matt Machell and contributors
     </div>
 </body>
