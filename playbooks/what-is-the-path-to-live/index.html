@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+      <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="/imgs/icon.svg" type="image/png" />
+  <link rel="apple-touch-icon" href="/imgs/icon.svg">
+  <link rel="mask-icon” href=”/imgs/icon.svg"" color=”#ffffff">
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed for TA Playbooks" href="https://mattmachell.github.io/ta-playbooks/feed.xml" />
+
+  <script>document.documentElement.classList.remove('no-js');</script>
+  
+  
+
+  
+
+    
+    
+    
+
+    <title>4. What is the path to live for this? - TA Playbooks</title>
+
+
+    <meta property="og:site_name" content="TA Playbooks" />
+    <meta property="og:title" content="4. What is the path to live for this? - TA Playbooks" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mattmachell.github.io/ta-playbooks/playbooks/what-is-the-path-to-live/" />
+    <meta name="theme-color" content="#58a4dc"/>
+
+    
+    <meta name="twitter:creator" content="@shuckle" />
+    
+
+    
+    <meta name="description" content="A set of tools and playbooks for agile Technical Architects" />
+    <meta name="twitter:description" content="A set of tools and playbooks for agile Technical Architects" />
+    <meta property="og:description" content="A set of tools and playbooks for agile Technical Architects" />
+    
+
+    
+    <meta property="og:image" content="/imgs/icon.svg" />
+    <meta name="twitter:image" content="/imgs/icon.svg" />
+    <meta property="og:image:alt" content="Page image for TA Playbooks" />
+    <meta name="twitter:image:alt" content="Page image for TA Playbooks" />
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/ta-playbooks/css/style.css" type="text/css" media="screen"/>
+</head>
+<body>
+    <div class="wrapper">
+    <h1>4. What is the path to live for this?</h1>
+    
+    <p>All software goes from a developer's laptop to the live system.</p>
+<p>How it makes that journey varies. It may be nice and simple. It may be something like this:</p>
+<p><img src="../../imgs/path-to-live.svg#diag" alt="A very complex squiggly path to live with no clear point"></p>
+<p>Which is to say, nobody quite knows how the change moves from a developers machine to being live, which environments it passes through, the value of those environments, who's involved, what manual or automated tests and checks are performed and who owns the gates at each stage.</p>
+<p>For any agile software product there's a great deal of value in mapping out the path to live for the code as a team. Covering:</p>
+<ol>
+<li>Who is involved at each stage?</li>
+<li>What checks take place at each stage?</li>
+<li>What gate's proceeding to the next stage? Who owns that?</li>
+<li>What differs in the stage's environments or data? Why?</li>
+<li>What value is provided by each stage?</li>
+<li>How is all this orchestrated in your build tools?</li>
+<li>What risks are these steps here to mitigate?</li>
+</ol>
+<p>For each of these questions you may discover that nobody is quite sure why a particular step exists, which is often a good reason to remove it and thereby optimise the process. However you can only answer those questions if the whole team are present (dev, product, delivery, infrstructure, QA if you have them). You need that so you can know that, for example, product are doing &quot;testing&quot; on a release on the preproduction environment simply because that's what they were told to do half a decade ago. You can then followup by asking where they would prefer to test and what value that manual intervention is giving.</p>
+<p>You can then follow up with asking:</p>
+<ol>
+<li>Where is best for those checks to take place?</li>
+<li>Can the checks be automated?</li>
+<li>Can the assurance they need be provided in another way?</li>
+</ol>
+<p>By working and reworking the path to live and actively questioning the value of steps in it you can end up with a new idealised workflow to implement. Hopefully with fewer environments, fewer manual checks and gates, and more confidence in delivery of the thing to live.</p>
+<p>An idealised modern flow might be something like:</p>
+<ol>
+<li>Branch created on local dev machine for the smallest slice of change</li>
+<li>Local checks for quality with precommit hooks (linting, unit tests, code coverage and so on)</li>
+<li>Push of branch to source control creates starts build pipeline.</li>
+<li>Pipeline builds isolated real infra in your cloud provider</li>
+<li>Pipeline runs full intregration and user journey tests against isolated development environment</li>
+<li>Use of the isolated environment to demo the new feature to product and team</li>
+<li>Successful build allows merge to mainline code of the branch</li>
+<li>Pipeline runs all lint, unit, integration and user journeys on the new mainline in the integration environment</li>
+<li>Successful build allows promotion to a staging environment with synthetic data at scale where security and targeted performance tests take place</li>
+<li>Successful build allows for promotion to live. Rolled out as a blue/green deploy where traffic is slowly cut across to new build and reverted if key metrics degrade.</li>
+</ol>
+<p>This is illustrative only and you shouldn't copy it without asking if those steps fit your team's and software's needs. If you have no automated tests, well, that's going to make your path to live very different indeed. Smaller or larger teams and organisations will also have differning concerns about differing risks and you need to build your path to live around reducing those, not the ones that led to the example above.</p>
+
+    
+
+    <hr>
+
+    <h2>Topics</h2>
+    <ul>
+    
+    <li><a href="/ta-playbooks/playbooks/the_sage_on_the_mountain/">6. The Wise Sage on the Mountain</a></li>
+    
+    <li><a href="/ta-playbooks/playbooks/what-the-worst-case-scenario/">5. What is the worst case scenario?</a></li>
+    
+    <li><a href="/ta-playbooks/playbooks/what-is-the-path-to-live/">4. What is the path to live for this?</a></li>
+    
+    <li><a href="/ta-playbooks/playbooks/what-are-the-2nd-order-consequences/">3. What are the consequences? What are the 2nd order consequences?</a></li>
+    
+    <li><a href="/ta-playbooks/playbooks/use-adrs/">2. Use Architectural decision records</a></li>
+    
+    <li><a href="/ta-playbooks/playbooks/ask-why/">1. Ask why?</a></li>
+    
+    </ul>
+    </div>
+    <div class="footer">
+        <p class="copyright">&copy; 2023 Matt Machell and contributors
+    </div>
+</body>

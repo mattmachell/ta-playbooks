@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>TA Playbooks</title>
+	<subtitle></subtitle>
+	<link href="https://mattmachell.github.io/ta-playbooks/feed.xml" rel="self"/>
+	<link href="https://mattmachell.github.io/ta-playbooks/"/>
+	<updated>2025-12-23T13:07:15Z</updated>
+	<id>https://mattmachell.github.io/ta-playbooks</id>
+	<author>
+  <name>Matt Machell</name>
+	</author>
+	
+  
+  <entry>
+    <title>1. Ask why?</title>
+    <link href="https://mattmachell.github.io/ta-playbooks/playbooks/ask-why/"/>
+    <updated>2025-12-23T13:07:09Z</updated>
+    <id>https://mattmachell.github.io/ta-playbooks/playbooks/ask-why/</id>
+    <content type="html"><![CDATA[
+      <p>Use the question &quot;why?&quot; to drill down to the real reason people are asking for a thing, be that a piece of technology, a new feature, a new tool or to use a new language.</p>
+<p>The trick is to ask it more than once. You may hear the term &quot;5 whys&quot; used as a technique in retrospectives and incident post-mortems. Use it to drill down to find the assumptions beneath what people are asking for and the causes beneath the symptoms that people are reporting.</p>
+<p>[example]</p>
+<h2>Other questions to ask</h2>
+<p>More variants on this exist. Good questions to drill down into a situation are:</p>
+<ul>
+<li>What are you trying to achieve?</li>
+<li>Who do you think this will benefit?</li>
+<li>What are the downstream impacts of doing this?</li>
+<li>Why do you think that will happen?</li>
+<li>Where did that information come from?</li>
+</ul>
+
+    ]]></content>
+  </entry>
+	
+  
+  <entry>
+    <title>2. Use Architectural decision records</title>
+    <link href="https://mattmachell.github.io/ta-playbooks/playbooks/use-adrs/"/>
+    <updated>2025-12-23T13:07:09Z</updated>
+    <id>https://mattmachell.github.io/ta-playbooks/playbooks/use-adrs/</id>
+    <content type="html"><![CDATA[
+      <p>You'll make a lot of decisions about whatever you are building. Both explicit and implicit.</p>
+<p>When you make a decision, document it as close to the code as possible. Your current team, your future team, new developers and future you will all thank you for the context provided by answering &quot;why the hell did they do it this way?&quot;</p>
+<p>Everything makes sense at the time, not everything makes sense in retrospect.</p>
+<p>Architectural Decision Records save you from having to do digital archaeology or guess at why things are the way they are. There's <a href="https://github.com/npryce/adr-tools">great tools</a> out there to help with this.</p>
+
+    ]]></content>
+  </entry>
+	
+  
+  <entry>
+    <title>3. What are the consequences? What are the 2nd order consequences?</title>
+    <link href="https://mattmachell.github.io/ta-playbooks/playbooks/what-are-the-2nd-order-consequences/"/>
+    <updated>2025-12-23T13:07:09Z</updated>
+    <id>https://mattmachell.github.io/ta-playbooks/playbooks/what-are-the-2nd-order-consequences/</id>
+    <content type="html"><![CDATA[
+      <p>For a given path in development, ask what the consequences of the choice are. Then from each of those ask what the 2nd order consequences are.</p>
+<p>This is basically the core of systems thinking. Elements don't existing in isolation. You can't make a choice based purely on the immidiate impact. You have to be sure to look for ripple impacts beyond that you can't initially see.</p>
+<p>You might be totally fine with those consquences and the risks they present. Or you might not. The important thing is to map them out. A spider diagram or a post-it session on a (virtual) whiteboard can be useful for this.</p>
+<p>Be sure to ask what the consequences are for people beyond your team too. What impact is there to users, stakeholders, the organisation, providers, 3rd parties, legal and so on.</p>
+<p>A classic example is a choice to use a single page app Javascript framework (like Angular or React). This (sometimes) makes develoepr's lives easier, but has a knock on impact on performance (slow rendering speed), accessibility (very few SPAs do accessibility well), maintainability (update cycles for SPAs have an impact). That in turn has an impact on recruiting staff with the right skills combinations, regulatory compliance and even conversion rates (slow rendering == few sales) of a web product.</p>
+<p>This technique is particularly useful when you are documenting choices in <a href="use-adrs">Architectural Decision Records</a>. As part of the consequences piece also look at the consequnces of the consequences.</p>
+
+    ]]></content>
+  </entry>
+	
+  
+  <entry>
+    <title>4. What is the path to live for this?</title>
+    <link href="https://mattmachell.github.io/ta-playbooks/playbooks/what-is-the-path-to-live/"/>
+    <updated>2025-12-23T13:07:09Z</updated>
+    <id>https://mattmachell.github.io/ta-playbooks/playbooks/what-is-the-path-to-live/</id>
+    <content type="html"><![CDATA[
+      <p>All software goes from a developer's laptop to the live system.</p>
+<p>How it makes that journey varies. It may be nice and simple. It may be something like this:</p>
+<p><img src="../../imgs/path-to-live.svg#diag" alt="A very complex squiggly path to live with no clear point"></p>
+<p>Which is to say, nobody quite knows how the change moves from a developers machine to being live, which environments it passes through, the value of those environments, who's involved, what manual or automated tests and checks are performed and who owns the gates at each stage.</p>
+<p>For any agile software product there's a great deal of value in mapping out the path to live for the code as a team. Covering:</p>
+<ol>
+<li>Who is involved at each stage?</li>
+<li>What checks take place at each stage?</li>
+<li>What gate's proceeding to the next stage? Who owns that?</li>
+<li>What differs in the stage's environments or data? Why?</li>
+<li>What value is provided by each stage?</li>
+<li>How is all this orchestrated in your build tools?</li>
+<li>What risks are these steps here to mitigate?</li>
+</ol>
+<p>For each of these questions you may discover that nobody is quite sure why a particular step exists, which is often a good reason to remove it and thereby optimise the process. However you can only answer those questions if the whole team are present (dev, product, delivery, infrstructure, QA if you have them). You need that so you can know that, for example, product are doing &quot;testing&quot; on a release on the preproduction environment simply because that's what they were told to do half a decade ago. You can then followup by asking where they would prefer to test and what value that manual intervention is giving.</p>
+<p>You can then follow up with asking:</p>
+<ol>
+<li>Where is best for those checks to take place?</li>
+<li>Can the checks be automated?</li>
+<li>Can the assurance they need be provided in another way?</li>
+</ol>
+<p>By working and reworking the path to live and actively questioning the value of steps in it you can end up with a new idealised workflow to implement. Hopefully with fewer environments, fewer manual checks and gates, and more confidence in delivery of the thing to live.</p>
+<p>An idealised modern flow might be something like:</p>
+<ol>
+<li>Branch created on local dev machine for the smallest slice of change</li>
+<li>Local checks for quality with precommit hooks (linting, unit tests, code coverage and so on)</li>
+<li>Push of branch to source control creates starts build pipeline.</li>
+<li>Pipeline builds isolated real infra in your cloud provider</li>
+<li>Pipeline runs full intregration and user journey tests against isolated development environment</li>
+<li>Use of the isolated environment to demo the new feature to product and team</li>
+<li>Successful build allows merge to mainline code of the branch</li>
+<li>Pipeline runs all lint, unit, integration and user journeys on the new mainline in the integration environment</li>
+<li>Successful build allows promotion to a staging environment with synthetic data at scale where security and targeted performance tests take place</li>
+<li>Successful build allows for promotion to live. Rolled out as a blue/green deploy where traffic is slowly cut across to new build and reverted if key metrics degrade.</li>
+</ol>
+<p>This is illustrative only and you shouldn't copy it without asking if those steps fit your team's and software's needs. If you have no automated tests, well, that's going to make your path to live very different indeed. Smaller or larger teams and organisations will also have differning concerns about differing risks and you need to build your path to live around reducing those, not the ones that led to the example above.</p>
+
+    ]]></content>
+  </entry>
+	
+  
+  <entry>
+    <title>5. What is the worst case scenario?</title>
+    <link href="https://mattmachell.github.io/ta-playbooks/playbooks/what-the-worst-case-scenario/"/>
+    <updated>2025-12-23T13:07:09Z</updated>
+    <id>https://mattmachell.github.io/ta-playbooks/playbooks/what-the-worst-case-scenario/</id>
+    <content type="html"><![CDATA[
+      <p>When building a new thing, and particularly anything the uses data of real people, a useful question to ask is &quot;what is the worst case scenario?&quot; Ownership bias tends to mean that when we have an idea, because its ours we focus only on the good it can achieve and are blind to the bad.</p>
+<p>Tech is now pretty notorious for this kind of careless lack of basic ethics, whether it's failing to train your machine learning with people of colour so your face detection only works on light skin, or building a targeted advertising platform that can also be used to radicalise people, or the ability of harassers to coordinate via social media, much can be achieved by considering the potential misuse and failure of your product as much as its success. There are great tools like Threat Modelling to help with the practicalities of the security side, but there are also the ethical, team and social aspects to consider.</p>
+<p>When considering a new piece of work, take some time to talk in really broad terms about what can happen to your system and the people relying on it because of the change you are undertaking.</p>
+<p>If we build this thing, what is the worst thing that can happen:</p>
+<ul>
+<li>to the data?</li>
+<li>to the product itself?</li>
+<li>to the users of the product?</li>
+<li>To the maintainers of the product?</li>
+<li>to the organisation?</li>
+<li>To people who aren't your users whose data you store? And do you store any inadvertantly?</li>
+<li>To people who aren't your users who are impacted by your products use?</li>
+<li>To other organisations?</li>
+<li>To the wider community?</li>
+</ul>
+<p>This can help you frame other, more detailed questions such as:</p>
+<ul>
+<li>Who might misuse the product and how?</li>
+<li>How might somebody cause harm by using our tools?</li>
+<li>Do our internal staff have too much low level data access?</li>
+<li>How might what we create be combined with something else to cause harm?</li>
+<li>Which bad actors are we facilitating with this product? How do we prevent them from doing that?</li>
+<li>How do we manage the community around this product? Who gets to decide that?</li>
+<li>Which impacts did we not account for? (<a href="../what-are-the-2nd-order-consequences">see 2nd order consequences</a>)</li>
+<li>Who did we fail to consult when building this? Who is impacted that we haven't talked to or tested with?</li>
+</ul>
+<p>Beyond this, project your thoughts forward in time to imagine the worst that might happen in the future, given where we expect to be:</p>
+<ul>
+<li>If this product exists for 5 years, what might change about these answers?</li>
+<li>What tech is just aroudn the corner that might be combined with our tool for ill?</li>
+<li>If this product exists for 20 years, what might change about these answers?</li>
+<li>How might this change when we have 100 million users?</li>
+</ul>
+<p>This temporal lens is a particularly useful framing when you look to store large amounts of personal data. Do you really need to ask everyone for that piece of personal data? What looks proportional at 100 users may look very different at 100 million users.</p>
+<p>Also, from a team perspective if you make this thing, will you look back at it in twenty years and be proud of it? If you designed in safegaurds against its misuse, I think you will be.</p>
+
+    ]]></content>
+  </entry>
+	
+  
+  <entry>
+    <title>6. The Wise Sage on the Mountain</title>
+    <link href="https://mattmachell.github.io/ta-playbooks/playbooks/the_sage_on_the_mountain/"/>
+    <updated>2025-12-23T13:07:09Z</updated>
+    <id>https://mattmachell.github.io/ta-playbooks/playbooks/the_sage_on_the_mountain/</id>
+    <content type="html"><![CDATA[
+      <p><em>Scene</em>: Wise TA sups their coffee of a morning.</p>
+<p><em>A supplicant developer approaches.</em></p>
+<p><em>Supplicant Developer:</em> Oh wise and all knowing Technical Architect! Answer our question! What colour should our self-immolation machine be? Red or Blue? We bring offerings of biscuits and everything!</p>
+<p><em>TA:</em> Have you considered maybe not building a self-immolation machine?</p>
+<p><em>SD:</em> I... What?</p>
+<p>--</p>
+<p>There is a tendancy in organisations to treat Technical Architects as the all-seeing wise sage who knows the answers.</p>
+<p>Which is of course nonsense, as we're likely just as confused, plagued by doubt or unsure as the next person. Hopefully we have a bit of experince, have seen a few problems before and know how to solve a fair few things technically, but there's no gaurantee. We're all limited by our own context, needs, biases and experience.</p>
+<p>There is a further tendancy to only bring the questions to you that are pre-framed in the context the team already have. We want you to choose between technology A and B may be the question, but that's just what they've decided to bring to frame the discussion. Part of your job is to dig a bit deeper and ask why that's even the choice.</p>
+<p>This can be frustrating to people who just want an answer.</p>
+<p>But part of the job of a TA is to zoom out from the current context, look at the wider landscape and see if the decision they want made is actually the one they should even be looking at.</p>
+<p>What problem are you trying to solve?</p>
+<p>Do the options presented address the cosmetic surface of that issue or the underlying cause. The &quot;five whys&quot; can help here. Drill down to work out what led people to think that the self-immolation device was the right course of action. Was that what the Customer asked for? The Product Owner? The Lead Developer? What information did they have at that point?</p>
+<p>Too often people fixate on the symptomatic solutions, particularly in cultures that are wedded to a micro-waterfall where the first a developer hears of an issue is when a ticket arrives to build a specified solution. Where the decisions were made without them. One of the things to constantly do in such environments is push to a &quot;technical&quot; view to be heard earlier in the process, and that's often the best place to push to have your voice heard as a TA. So that you can avoid situations where by the time the decision reaches you, your deciding between two or more equally bad options.</p>
+<p>People also often have a desired outcome when they bring you a question. How they frame it often is a tactic to get the outcome they want. Consider how often you might hear &quot;should be use this industry standard technology or this other thing?&quot;. The same with &quot;best practice&quot;, for whom and in what context is it best practice? That matters. Facebook's problems are not your problems and visa versa. I've seen React kill products that could have been a simple web form, but it was implemented because &quot;that's what the industry is doing&quot; rather than because it was a suitable solution for the context at hand. It depends. Always.</p>
+<p>Take the time to step back. Look at the bigger picture. The upstream causes and the downstream consequences. Find the underlying problem for real people and look at that. You might need that immolation machine, but maybe it doesn't need the self part.</p>
+
+    ]]></content>
+  </entry>
+	
+</feed>
