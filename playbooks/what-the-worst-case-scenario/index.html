@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+      <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="/imgs/icon.svg" type="image/png" />
+  <link rel="apple-touch-icon" href="/imgs/icon.svg">
+  <link rel="mask-icon” href=”/imgs/icon.svg"" color=”#ffffff">
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed for TA Playbooks" href="https://mattmachell.github.io/ta-playbooks/feed.xml" />
+
+  <script>document.documentElement.classList.remove('no-js');</script>
+  
+  
+
+  
+
+    
+    
+    
+
+    <title>5. What is the worst case scenario? - TA Playbooks</title>
+
+
+    <meta property="og:site_name" content="TA Playbooks" />
+    <meta property="og:title" content="5. What is the worst case scenario? - TA Playbooks" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mattmachell.github.io/ta-playbooks/playbooks/what-the-worst-case-scenario/" />
+    <meta name="theme-color" content="#58a4dc"/>
+
+    
+    <meta name="twitter:creator" content="@shuckle" />
+    
+
+    
+    <meta name="description" content="A set of tools and playbooks for agile Technical Architects" />
+    <meta name="twitter:description" content="A set of tools and playbooks for agile Technical Architects" />
+    <meta property="og:description" content="A set of tools and playbooks for agile Technical Architects" />
+    
+
+    
+    <meta property="og:image" content="/imgs/icon.svg" />
+    <meta name="twitter:image" content="/imgs/icon.svg" />
+    <meta property="og:image:alt" content="Page image for TA Playbooks" />
+    <meta name="twitter:image:alt" content="Page image for TA Playbooks" />
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/ta-playbooks/css/style.css" type="text/css" media="screen"/>
+</head>
+<body>
+    <div class="wrapper">
+    <h1>5. What is the worst case scenario?</h1>
+    
+    <p>When building a new thing, and particularly anything the uses data of real people, a useful question to ask is &quot;what is the worst case scenario?&quot; Ownership bias tends to mean that when we have an idea, because its ours we focus only on the good it can achieve and are blind to the bad.</p>
+<p>Tech is now pretty notorious for this kind of careless lack of basic ethics, whether it's failing to train your machine learning with people of colour so your face detection only works on light skin, or building a targeted advertising platform that can also be used to radicalise people, or the ability of harassers to coordinate via social media, much can be achieved by considering the potential misuse and failure of your product as much as its success. There are great tools like Threat Modelling to help with the practicalities of the security side, but there are also the ethical, team and social aspects to consider.</p>
+<p>When considering a new piece of work, take some time to talk in really broad terms about what can happen to your system and the people relying on it because of the change you are undertaking.</p>
+<p>If we build this thing, what is the worst thing that can happen:</p>
+<ul>
+<li>to the data?</li>
+<li>to the product itself?</li>
+<li>to the users of the product?</li>
+<li>To the maintainers of the product?</li>
+<li>to the organisation?</li>
+<li>To people who aren't your users whose data you store? And do you store any inadvertantly?</li>
+<li>To people who aren't your users who are impacted by your products use?</li>
+<li>To other organisations?</li>
+<li>To the wider community?</li>
+</ul>
+<p>This can help you frame other, more detailed questions such as:</p>
+<ul>
+<li>Who might misuse the product and how?</li>
+<li>How might somebody cause harm by using our tools?</li>
+<li>Do our internal staff have too much low level data access?</li>
+<li>How might what we create be combined with something else to cause harm?</li>
+<li>Which bad actors are we facilitating with this product? How do we prevent them from doing that?</li>
+<li>How do we manage the community around this product? Who gets to decide that?</li>
+<li>Which impacts did we not account for? (<a href="../what-are-the-2nd-order-consequences">see 2nd order consequences</a>)</li>
+<li>Who did we fail to consult when building this? Who is impacted that we haven't talked to or tested with?</li>
+</ul>
+<p>Beyond this, project your thoughts forward in time to imagine the worst that might happen in the future, given where we expect to be:</p>
+<ul>
+<li>If this product exists for 5 years, what might change about these answers?</li>
+<li>What tech is just aroudn the corner that might be combined with our tool for ill?</li>
+<li>If this product exists for 20 years, what might change about these answers?</li>
+<li>How might this change when we have 100 million users?</li>
+</ul>
+<p>This temporal lens is a particularly useful framing when you look to store large amounts of personal data. Do you really need to ask everyone for that piece of personal data? What looks proportional at 100 users may look very different at 100 million users.</p>
+<p>Also, from a team perspective if you make this thing, will you look back at it in twenty years and be proud of it? If you designed in safegaurds against its misuse, I think you will be.</p>
+
+    
+
+    <hr>
+
+    <h2>Topics</h2>
+    <ul>
+    
+    <li><a href="/ta-playbooks/playbooks/the_sage_on_the_mountain/">6. The Wise Sage on the Mountain</a></li>
+    
+    <li><a href="/ta-playbooks/playbooks/what-the-worst-case-scenario/">5. What is the worst case scenario?</a></li>
+    
+    <li><a href="/ta-playbooks/playbooks/what-is-the-path-to-live/">4. What is the path to live for this?</a></li>
+    
+    <li><a href="/ta-playbooks/playbooks/what-are-the-2nd-order-consequences/">3. What are the consequences? What are the 2nd order consequences?</a></li>
+    
+    <li><a href="/ta-playbooks/playbooks/use-adrs/">2. Use Architectural decision records</a></li>
+    
+    <li><a href="/ta-playbooks/playbooks/ask-why/">1. Ask why?</a></li>
+    
+    </ul>
+    </div>
+    <div class="footer">
+        <p class="copyright">&copy; 2023 Matt Machell and contributors
+    </div>
+</body>
