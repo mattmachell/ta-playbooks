@@ -4,7 +4,7 @@
 	<subtitle></subtitle>
 	<link href="https://mattmachell.github.io/ta-playbooks/feed.xml" rel="self"/>
 	<link href="https://mattmachell.github.io/ta-playbooks/"/>
-	<updated>2026-03-14T19:14:07Z</updated>
+	<updated>2026-03-29T13:37:12Z</updated>
 	<id>https://mattmachell.github.io/ta-playbooks</id>
 	<author>
   <name>Matt Machell</name>
@@ -14,7 +14,7 @@
   <entry>
     <title>1. Ask why?</title>
     <link href="https://mattmachell.github.io/ta-playbooks/playbooks/ask-why/"/>
-    <updated>2026-03-14T19:14:03Z</updated>
+    <updated>2026-03-29T13:37:04Z</updated>
     <id>https://mattmachell.github.io/ta-playbooks/playbooks/ask-why/</id>
     <content type="html"><![CDATA[
       <p>Use the question &quot;why?&quot; to drill down to the real reason people are asking for a thing, be that a piece of technology, a new feature, a new tool or to use a new language.</p>
@@ -37,7 +37,7 @@
   <entry>
     <title>2. Use Architectural decision records</title>
     <link href="https://mattmachell.github.io/ta-playbooks/playbooks/use-adrs/"/>
-    <updated>2026-03-14T19:14:03Z</updated>
+    <updated>2026-03-29T13:37:04Z</updated>
     <id>https://mattmachell.github.io/ta-playbooks/playbooks/use-adrs/</id>
     <content type="html"><![CDATA[
       <p>You'll make a lot of decisions about whatever you are building. Both explicit and implicit.</p>
@@ -52,7 +52,7 @@
   <entry>
     <title>3. What are the consequences? What are the 2nd order consequences?</title>
     <link href="https://mattmachell.github.io/ta-playbooks/playbooks/what-are-the-2nd-order-consequences/"/>
-    <updated>2026-03-14T19:14:03Z</updated>
+    <updated>2026-03-29T13:37:04Z</updated>
     <id>https://mattmachell.github.io/ta-playbooks/playbooks/what-are-the-2nd-order-consequences/</id>
     <content type="html"><![CDATA[
       <p>For a given path in development, ask what the consequences of the choice are. Then from each of those ask what the 2nd order consequences are.</p>
@@ -69,7 +69,7 @@
   <entry>
     <title>4. What is the path to live for this?</title>
     <link href="https://mattmachell.github.io/ta-playbooks/playbooks/what-is-the-path-to-live/"/>
-    <updated>2026-03-14T19:14:03Z</updated>
+    <updated>2026-03-29T13:37:04Z</updated>
     <id>https://mattmachell.github.io/ta-playbooks/playbooks/what-is-the-path-to-live/</id>
     <content type="html"><![CDATA[
       <p>All software goes from a developer's laptop to the live system.</p>
@@ -116,7 +116,7 @@
   <entry>
     <title>5. What is the worst case scenario?</title>
     <link href="https://mattmachell.github.io/ta-playbooks/playbooks/what-the-worst-case-scenario/"/>
-    <updated>2026-03-14T19:14:03Z</updated>
+    <updated>2026-03-29T13:37:04Z</updated>
     <id>https://mattmachell.github.io/ta-playbooks/playbooks/what-the-worst-case-scenario/</id>
     <content type="html"><![CDATA[
       <p>When building a new thing, and particularly anything the uses data of real people, a useful question to ask is &quot;what is the worst case scenario?&quot; Ownership bias tends to mean that when we have an idea, because its ours we focus only on the good it can achieve and are blind to the bad.</p>
@@ -162,7 +162,7 @@
   <entry>
     <title>6. The Wise Sage on the Mountain</title>
     <link href="https://mattmachell.github.io/ta-playbooks/playbooks/the_sage_on_the_mountain/"/>
-    <updated>2026-03-14T19:14:03Z</updated>
+    <updated>2026-03-29T13:37:04Z</updated>
     <id>https://mattmachell.github.io/ta-playbooks/playbooks/the_sage_on_the_mountain/</id>
     <content type="html"><![CDATA[
       <p><em>Scene</em>: Wise TA sups their coffee of a morning.</p>
