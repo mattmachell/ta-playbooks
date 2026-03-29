@@ -8,17 +8,17 @@ jobs:
   build_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
+      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
-          node-version: 20
-      - run: npm install
+          node-version: '22.x'
+      - run: npm ci --ignore-scripts
       - run: npm run build
         env: 
           BASE_URL: /ta-playbooks
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v1.1.0
-        env:
-          PUBLISH_DIR: dist 
-          PUBLISH_BRANCH: gh-pages
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e # 4.0.0
+        with:
+          publish_dir: dist 
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
