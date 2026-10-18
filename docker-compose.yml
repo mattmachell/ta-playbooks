@@ -1,0 +1,30 @@
+services:
+  build:
+    volumes:
+      - ./src:/app/src
+      - ./dist:/app/dist
+      - ./.eleventy.js:/app/.eleventy.js
+
+    command: npm run build
+    build:
+      context: ./
+
+  serve:
+    volumes:
+      - ./src:/app/src
+      - ./dist:/app/dist
+      - ./.eleventy.js:/app/.eleventy.js
+
+    ports:
+      - 8088:8080
+    command: npm run start
+    build:
+      context: ./
+
+  audit:
+    volumes:
+      - ./package-lock.json:/app/package-lock.json
+      - ./package.json:/app/package.json
+    command: npm audit fix
+    build:
+      context: ./
