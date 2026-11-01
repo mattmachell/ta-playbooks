@@ -1,5 +1,8 @@
 ---
 title: 4. What is the path to live for this?
+date: 2021-02-22
+tags: ['ta-playbooks', 'architectue', 'technical-architecture']
+redirect: https://eclecticdreams.com/blog/ta-playbooks-4-what-is-the-path-to-live/
 ---
 
 All software goes from a developer's laptop to the live system.

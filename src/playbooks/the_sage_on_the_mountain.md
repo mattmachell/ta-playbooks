@@ -1,5 +1,8 @@
 ---
 title: 6. The Wise Sage on the Mountain
+date: 2023-02-10
+tags: ['ta-playbooks', 'architectue', 'technical-architecture']
+redirect: https://eclecticdreams.com/blog/ta-playbooks-6-the-sage-on-the-mountain/
 ---
 
 *Scene*: Wise TA sups their coffee of a morning.

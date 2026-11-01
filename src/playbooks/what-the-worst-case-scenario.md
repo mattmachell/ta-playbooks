@@ -1,5 +1,8 @@
 ---
 title: 5. What is the worst case scenario?
+date: 2021-06-21
+tags: ['ta-playbooks', 'architectue', 'technical-architecture']
+redirect: https://eclecticdreams.com/blog/ta-playbooks-5-what-is-the-worst-can-happen/
 ---
 
 When building a new thing, and particularly anything the uses data of real people, a useful question to ask is "what is the worst case scenario?" Ownership bias tends to mean that when we have an idea, because its ours we focus only on the good it can achieve and are blind to the bad.

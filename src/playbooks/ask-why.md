@@ -1,12 +1,13 @@
 ---
 title: 1. Ask why?
+date: 2021-02-06
+tags: ['ta-playbooks', 'architectue']
+redirect: https://eclecticdreams.com/blog/ta-playbooks-1-ask-why/
 ---
 
 Use the question "why?" to drill down to the real reason people are asking for a thing, be that a piece of technology, a new feature, a new tool or to use a new language.
 
 The trick is to ask it more than once. You may hear the term "5 whys" used as a technique in retrospectives and incident post-mortems. Use it to drill down to find the assumptions beneath what people are asking for and the causes beneath the symptoms that people are reporting.
-
-[example]
 
 ## Other questions to ask
 
