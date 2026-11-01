@@ -1,5 +1,8 @@
 ---
 title: 2. Use Architectural decision records
+date: 2021-02-22
+tags: ['ta-playbooks', 'architectue', 'technical-architecture']
+redirect: https://eclecticdreams.com/blog/ta-playbooks-2-use-adrs/
 ---
 
 You'll make a lot of decisions about whatever you are building. Both explicit and implicit. 

@@ -1,5 +1,8 @@
 ---
 title: 3. What are the consequences? What are the 2nd order consequences?
+date: 2021-02-06
+tags: ['ta-playbooks', 'architectue', 'technical-architecture']
+redirect: https://eclecticdreams.com/blog/ta-playbooks-3-what-are-the-2nd-order-consequences/
 ---
 
 For a given path in development, ask what the consequences of the choice are. Then from each of those ask what the 2nd order consequences are.
